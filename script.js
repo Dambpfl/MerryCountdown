@@ -34,7 +34,7 @@ function lesCadeaux(){
                 return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
             } else {
                 cadeaux.classList.toggle("clicked"); // INTERRUPTEUR OUVERT/FERMER DE "CADEAUX"
-                cadeaux.classList.add("ouvert"); // INDIQUE QUE LE "CADEAUX" EST OUVERT
+                cadeaux.classList.add("ouvert"); // AJOUTE UNE CLASS "OUVERT" au "CADEAUX" (DIT QUE LE "CADEAUX" EST OUVERT)
 
                 const randomMessage = getRandomMessage();  // CREE "randomMessage" à partir de la fonction qui utilise "messages"
                 afficherPopup("SURPRISE ! <br><br>" + randomMessage);
