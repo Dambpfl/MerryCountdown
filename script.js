@@ -23,8 +23,8 @@ const board = document.querySelector("#board")
 
 function lesCadeaux(){
     for (let i = 1; i <= 24; i++) {           // CREE 24 CADEAUX
-        const cadeaux = document.createElement("div")  // UNE DIV CADEAUX
-        cadeaux.classList.add("cadeaux") 
+        const cadeaux = document.createElement("div")  // UNE DIV 
+        cadeaux.classList.add("cadeaux") // CLASS CADEAUX
 
         cadeaux.textContent = i;  // AFFICHE LE NB DE CADEAUX
         board.appendChild(cadeaux) // DIV CADEAUX DANS ID BOARD
