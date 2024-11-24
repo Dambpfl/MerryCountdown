@@ -37,7 +37,7 @@ function lesCadeaux(){
                 cadeaux.classList.add("ouvert"); // AJOUTE UNE CLASS "OUVERT" au "CADEAUX" (DIT QUE LE "CADEAUX" EST OUVERT)
 
                 const randomMessage = getRandomMessage();  // CREE "randomMessage" à partir de la fonction qui utilise "messages"
-                afficherPopup("SURPRISE ! <br><br>" + randomMessage);
+                afficherPopup(randomMessage);
             }
             
 
@@ -48,20 +48,24 @@ function lesCadeaux(){
 lesCadeaux()
 
 // POP UP //
+const popup = document.getElementById("popup");
+const popupMessage = document.getElementById("popupMessage");
+const btnClose = document.getElementById("btnClose"); 
 let popupOuvert = false; // CREE VARIABLE POPUPOUVERT INITIALEMENT FERMER
 
 function afficherPopup(message) {
-    const popup = document.getElementById("popup");
-    const popupMessage = document.getElementById("popupMessage");
-    popup.style.display = "flex"; // AFFICHE POPUP
-    popupMessage.innerHTML = message; // AFFICHE MESSAGE (HTML POUR RETOUR A LA LIGNE)
-    popupOuvert = true; // INDIQUE POPUP OUVERT
+    if (message) {
+        popup.style.display = "flex"; // AFFICHE POPUP
+        popupMessage.innerHTML = "SURPRISE ! <br><br>" + message;
+        popupOuvert = true // INDIQUE POPUP OUVERT
+    } else {
+        popup.style.display = "none"; // POPUP DISPARAIT
+        popupOuvert = false; // INDIQUE POPUP FERMER
     }
+}
 
-    const btnClose = document.getElementById("btnClose"); 
-    btnClose.addEventListener("click", function(){ // AU CLICK
-    popup.style.display = "none"; // POPUP DISPARAIT
-    popupOuvert = false; // INDIQUE POPUP FERMER
+btnClose.addEventListener("click", function() {
+    afficherPopup() // IF POPUP (vide) = fermer
 })
 
 
