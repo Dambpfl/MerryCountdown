@@ -53,15 +53,14 @@ let popupOuvert = false; // CREE VARIABLE POPUPOUVERT INITIALEMENT FERMER
 function afficherPopup(message) {
     const popup = document.getElementById("popup");
     const popupMessage = document.getElementById("popupMessage");
-    popup.style.display = "flex"; // AFFICHE POP UP
-
-    popupMessage.innerHTML = message; // POUR UTILISER LE RETOUR A LA LIGNE (plutot que textContent)
+    popup.style.display = "flex"; // AFFICHE POPUP
+    popupMessage.innerHTML = message; // AFFICHE MESSAGE (HTML POUR RETOUR A LA LIGNE)
     popupOuvert = true; // INDIQUE POPUP OUVERT
     }
 
-    const btnClose = document.getElementById("btnClose"); // AU CLIQUE POPUP NONE
-    btnClose.addEventListener("click", function(){
-    popup.style.display = "none";
+    const btnClose = document.getElementById("btnClose"); 
+    btnClose.addEventListener("click", function(){ // AU CLICK
+    popup.style.display = "none"; // POPUP DISPARAIT
     popupOuvert = false; // INDIQUE POPUP FERMER
 })
 
