@@ -29,7 +29,7 @@ function lesCadeaux(){
         cadeaux.textContent = i;  // AFFICHE LE NB DE CADEAUX
         board.appendChild(cadeaux) // DIV CADEAUX DANS ID BOARD
     
-        cadeaux.addEventListener("click", function() {  // INTERRUPTEUR .CLICKED
+        cadeaux.addEventListener("click", function() { 
             if (popupOuvert || cadeaux.classList.contains("ouvert")) {
                 return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
             } else {
