@@ -11,7 +11,7 @@ const messages = [
     "UN ETHYLOTEST !",
     "UNE BOÎTE DE PRÉSERVATIF PHOSPHORESCENT !",
     "LE MANUEL D'UTILISATION D'UNE VOITURE !",
-    "UN FER A REPASSER !",
+    "UN FER À REPASSER !",
     "UNE GUITARE !",
     "UN STYLO !",
     "DE LA POMMADE !",
@@ -51,6 +51,7 @@ lesCadeaux()
 const popup = document.getElementById("popup");
 const popupMessage = document.getElementById("popupMessage");
 const btnClose = document.getElementById("btnClose"); 
+
 let popupOuvert = false; // CREE VARIABLE POPUPOUVERT INITIALEMENT FERMER
 
 function afficherPopup(message) {
@@ -64,6 +65,7 @@ function afficherPopup(message) {
     }
 }
 
+// BOUTON FERMER DANS POPUP
 btnClose.addEventListener("click", function() {
     afficherPopup() // IF POPUP (vide) = fermer
 })
@@ -71,6 +73,10 @@ btnClose.addEventListener("click", function() {
 
 // MESSAGE ALEATOIRE //
 function getRandomMessage() {
-    const messagesIndex = Math.floor(Math.random() * messages.length); 
-    return messages[messagesIndex]; 
+    const messagesTableau = Math.floor(Math.random() * messages.length); // MULTIPLIE L'ALEATOIRE PAR MON TABLEAU "MESSAGES"
+    const mess = messages[messagesTableau]; // MESS = MESSAGES[ALEATOIRE*TABLEAU] (1 MESSAGE ALEATOIRE PARMIS LE TABLEAU DE MESSAGES)
+
+    messages.splice(messagesTableau, 1); // SUPPRIME 1 ELEMENT DU TABLEAU "MESSAGES"
+
+    return mess; // RETOURNE 1 MESSAGE ALEATOIRE
 }
