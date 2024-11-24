@@ -92,13 +92,28 @@ const btnMelange = document.getElementById("btnMelange");
 
 btnMelange.addEventListener("click", function() {
     resetCadeaux();
-
+    melangeAll();
 })
 
 function resetCadeaux() {
     const allCadeaux = board.querySelectorAll(".cadeaux")
-
     allCadeaux.forEach(function(cadeau) {
-        cadeau.classList.remove("ouvert", "selecteur");
+        cadeau.classList.remove("ouvert", "selecteur"); 
+    })
+}
+
+function melangeAll() {
+    const allElements = Array.from(board.children);
+
+    for (let i = allElements.length - 1; i > 0; i--) {
+        const m = Math.floor(Math.random() * (i + 1));
+
+        const temp = allElements[i];
+        allElements[i] = allElements[m];
+        allElements[m] = temp;
+    }
+
+    allElements.forEach(function (cadeau) {
+        board.appendChild(cadeau);
     })
 }
