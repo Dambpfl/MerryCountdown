@@ -40,7 +40,7 @@ function lesCadeaux(){
             if (popupOuvert || cadeaux.classList.contains("ouvert")) {
                 return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
             } else {
-                cadeaux.classList.toggle("clicked"); // INTERRUPTEUR OUVERT/FERMER DE "CADEAUX"
+                cadeaux.classList.toggle("selecteur"); // INTERRUPTEUR OUVERT/FERMER DE "CADEAUX"
                 cadeaux.classList.add("ouvert"); // AJOUTE UNE CLASS "OUVERT" au "CADEAUX" (DIT QUE LE "CADEAUX" EST OUVERT)
 
                 const randomMessage = getRandomMessage();  // CREE "randomMessage" à partir de la fonction qui utilise "messages"
@@ -91,5 +91,14 @@ function getRandomMessage() {
 const btnMelange = document.getElementById("btnMelange");
 
 btnMelange.addEventListener("click", function() {
+    resetCadeaux();
 
 })
+
+function resetCadeaux() {
+    const allCadeaux = board.querySelectorAll(".cadeaux")
+
+    allCadeaux.forEach(function(cadeau) {
+        cadeau.classList.remove("ouvert", "selecteur");
+    })
+}

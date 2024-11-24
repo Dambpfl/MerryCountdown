@@ -45,7 +45,7 @@ body h1{
     cursor: pointer;
 }
 
-.cadeaux.clicked {
+.cadeaux.selecteur {
     background-color: gray;
     transform: scale(0.9);
 }
