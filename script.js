@@ -27,6 +27,7 @@ const messages = [
 
 
 const board = document.querySelector("#board");
+let nb = 1; // INITIALISE UNE VARIABLE A 1
 
 function lesCadeaux(){
     for (let i = 1; i <= 24; i++) {           // CREE 24 CADEAUX
@@ -39,14 +40,19 @@ function lesCadeaux(){
         cadeaux.addEventListener("click", function() { 
             if (popupOuvert || cadeaux.classList.contains("ouvert")) {
                 return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
-            } else {
-                cadeaux.classList.toggle("selecteur"); // INTERRUPTEUR OUVERT/FERMER DE "CADEAUX"
-                cadeaux.classList.add("ouvert"); // AJOUTE UNE CLASS "OUVERT" au "CADEAUX" (DIT QUE LE "CADEAUX" EST OUVERT)
-
+                
+            }
+            
+            while (i === nb){ // TANT QUE MON CADEAU EST EGALE A MA VARIABLE NB
                 const randomMessage = getRandomMessage();  // CREE "randomMessage" à partir de la fonction qui utilise "messages"
                 afficherPopup(randomMessage);
-            }
-        })
+
+                cadeaux.classList.toggle("selecteur"); // INTERRUPTEUR OUVERT/FERMER DE "CADEAUX"
+                cadeaux.classList.add("ouvert"); // AJOUTE UNE CLASS "OUVERT" au "CADEAUX" (DIT QUE LE "CADEAUX" EST OUVERT)
+                
+                nb++; // AJOUTE 1 A MA VARIABLE NB
+                }
+            })
     }
 }
 
@@ -93,6 +99,7 @@ const btnMelange = document.getElementById("btnMelange");
 btnMelange.addEventListener("click", function() {
     resetCadeaux();
     melangeAll();
+    nb = 1;
 })
 
 function resetCadeaux() {
