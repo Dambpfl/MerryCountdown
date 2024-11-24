@@ -5,7 +5,7 @@ const messages = [
     "UN T-SHIRT 'JE SUIS MOCHE' !",
     "C'EST VIDE",
     "TU AS GAGNÉ UN DATE AVEC LA MÈRE NOËL !",
-    "TU AS GAGNÉ UNE SOIRÉE AVEC LE PÈRE FOUETTARD !",
+    "TU AS GAGNÉ UNE SOIRÉE SADOMASOCHISME AVEC LE PÈRE FOUETTARD !",
     "UN SEUL GANT DE BOXE !",
     "LE PARFUM 'BRISE D'ANUS' !",
     "UN ETHYLOTEST !",
@@ -46,8 +46,6 @@ function lesCadeaux(){
                 const randomMessage = getRandomMessage();  // CREE "randomMessage" à partir de la fonction qui utilise "messages"
                 afficherPopup(randomMessage);
             }
-            
-
         })
     }
 }
