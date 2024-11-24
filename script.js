@@ -26,15 +26,15 @@ const messages = [
 ];
 
 
-const board = document.querySelector("#board")
+const board = document.querySelector("#board");
 
 function lesCadeaux(){
     for (let i = 1; i <= 24; i++) {           // CREE 24 CADEAUX
-        const cadeaux = document.createElement("div")  // UNE DIV 
-        cadeaux.classList.add("cadeaux") // CLASS CADEAUX
+        const cadeaux = document.createElement("div");  // UNE DIV 
+        cadeaux.classList.add("cadeaux"); // CLASS CADEAUX
 
         cadeaux.textContent = i;  // AFFICHE LE NB DE CADEAUX
-        board.appendChild(cadeaux) // DIV CADEAUX DANS ID BOARD
+        board.appendChild(cadeaux); // DIV CADEAUX DANS ID BOARD
     
         cadeaux.addEventListener("click", function() { 
             if (popupOuvert || cadeaux.classList.contains("ouvert")) {
@@ -50,7 +50,7 @@ function lesCadeaux(){
     }
 }
 
-lesCadeaux()
+lesCadeaux();
 
 // POP UP //
 const popup = document.getElementById("popup");
@@ -63,7 +63,7 @@ function afficherPopup(message) {
     if (message) {
         popup.style.display = "flex"; // AFFICHE POPUP
         popupMessage.innerHTML = "SURPRISE ! <br><br>" + message;
-        popupOuvert = true // INDIQUE POPUP OUVERT
+        popupOuvert = true; // INDIQUE POPUP OUVERT
     } else {
         popup.style.display = "none"; // POPUP DISPARAIT
         popupOuvert = false; // INDIQUE POPUP FERMER
@@ -72,7 +72,7 @@ function afficherPopup(message) {
 
 // BOUTON FERMER DANS POPUP
 btnClose.addEventListener("click", function() {
-    afficherPopup() // IF POPUP (vide) = fermer
+    afficherPopup(); // IF POPUP (vide) = fermer
 })
 
 
@@ -85,3 +85,11 @@ function getRandomMessage() {
 
     return mess; // RETOURNE 1 MESSAGE ALEATOIRE
 }
+
+
+// BOUTON MELANGER //
+const btnMelange = document.getElementById("btnMelange");
+
+btnMelange.addEventListener("click", function() {
+
+})
