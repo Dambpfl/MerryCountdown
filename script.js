@@ -39,8 +39,7 @@ function lesCadeaux(){
     
         cadeaux.addEventListener("click", function() { 
             if (popupOuvert || cadeaux.classList.contains("ouvert")) {
-                return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
-                
+                return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT  
             }
             
             while (i === nb){ // TANT QUE MON CADEAU EST EGALE A MA VARIABLE NB
@@ -96,7 +95,7 @@ function getRandomMessage() {
 // BOUTON MELANGER //
 const btnMelange = document.getElementById("btnMelange");
 
-btnMelange.addEventListener("click", function() {
+btnMelange.addEventListener("click", function() {  // AU CLIQUE
     resetCadeaux();
     melangeAll();
     nb = 1;
