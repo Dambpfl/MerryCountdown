@@ -56,6 +56,7 @@ function lesCadeaux(){
 }
 
 lesCadeaux();
+melangeAll();
 
 // POP UP //
 const popup = document.getElementById("popup");
