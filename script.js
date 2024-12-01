@@ -109,7 +109,7 @@ function handleClickOnCase(maCaseRecue) {
     }
     // ici on check juste le status du cadeau pour connaitre le message a afficher
     if (maCaseRecue.classList.contains("case-ouverte")) {
-        afficherPopup('Tu as déjà ouvert ce cadeau !' + "<br><br>" + message);
+        afficherPopup('Ton cadeau était :' + "<br><br>" + message);
         return; // PAS POSSIBLE DE CLICK SI "POPUP" OUVERT OU SI "CADEAUX" OUVERT
     }
     maCaseRecue.classList.add("case-ouverte"); // AJOUTE CLASS "case-ouverte" A "CADEAUX"
