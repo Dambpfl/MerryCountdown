@@ -70,31 +70,48 @@ body h1{
 
 .cadeaux.ver1 {
     background-color: rgb(56 136 53);
+    background-image: url("img/christmas-pattern-2.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: center;
     color: white;
 }
 
+
 .cadeaux.ver2 {
     background-color: rgb(255, 196, 0);
-    color: black;
+    background-image: url("img/christmas-pattern-5.png");
+    background-size: 202%;
+    background-repeat: repeat;
+    background-position: center;
+    color: #ffffff;
 }
 
 .cadeaux.ver3 {
     background-color: rgb(107 84 89);
-    color: #ccb7cb;
+    background-image: url("img/christmas-pattern-3.png");
+    background-size: 185%;
+    background-repeat: repeat;
+    background-position: center;
+    color: #ebfffe;
 }
 
 .cadeaux.ver4 {
     background-color: rgb(255, 0, 0);
-    color: white;
+    background-image: url("img/christmas-pattern-4.png");
+    background-size: 258%;
+    background-repeat: repeat;
+    background-position: inherit;
+    color: #000000;
 }
 
 .cadeaux.ver5 {
     background-color: rgb(255, 255, 255);
-    color: rgb(56 136 53);
+    color: rgb(28 52 35);
     background-image: url("img/christmas-pattern.jpg");
-    background-size: 90%;
+    background-size: 251%;
     background-repeat: repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 .cadeaux.case-ouverte {
