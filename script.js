@@ -184,3 +184,4 @@ function melangeAll() {
     })
 }
 
+melangeAll();
