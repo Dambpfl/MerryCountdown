@@ -115,14 +115,10 @@ body h1{
 }
 
 .cadeaux.case-ouverte {
-    opacity: .5;
+    opacity: .3;
     transform: scale(0.9);
 }
 
-.cadeaux.selecteur {
-    background-color: gray;
-    transform: scale(0.9);
-}
 
 /* BOUTON MELANGER */
 
