@@ -103,7 +103,7 @@ function handleClickOnCase(maCaseRecue) {
         let previousCaseId = 'case' + previousValue; // on crée l'id de la case précédente
         let previousCase = document.getElementById(previousCaseId); // on get la case précédente
         if (previousCase && !previousCase.classList.contains("case-ouverte")) { // si la case précédente n'est pas ouverte
-            afficherPopup("Tu dois ouvrir les cases dans l'ordre !"); // on affiche un message
+            afficherPopup("Tu dois ouvrir les cadeaux dans l'ordre !"); // on affiche un message
             return; // on sort de la fonction
         }
     }
