@@ -106,38 +106,3 @@ Modifiez l'attribut `data-cases` dans `index.html` :
 ## 🎁 Messages Inclus
 
 Le calendrier contient 24 messages humoristiques variés, allant de cadeaux insolites à des situations cocasses. Parfait pour apporter de la bonne humeur pendant la période de l'Avent !
-
-## 🔧 Développement
-
-### Structure du Code
-- Code modulaire avec fonctions séparées
-- Gestion d'événements moderne
-- Utilisation du localStorage pour la persistance
-- Responsive design avec Flexbox
-
-### Améliorations Possibles
-- [ ] Mode sombre/clair
-- [ ] Sons et effets visuels
-- [ ] Partage sur réseaux sociaux
-- [ ] Version mobile optimisée
-- [ ] Système de thèmes saisonniers
-
-## 📱 Compatibilité
-
-- ✅ Chrome 80+
-- ✅ Firefox 75+
-- ✅ Safari 13+
-- ✅ Edge 80+
-- ✅ Appareils mobiles
-
-## 📞 Support
-
-Pour toute question ou suggestion d'amélioration, n'hésitez pas à ouvrir une issue sur le repository.
-
-## 📄 Licence
-
-Ce projet est sous licence libre. Vous pouvez l'utiliser, le modifier et le redistribuer librement.
-
----
-
-🎅 **Joyeux Noël et bon développement !** 🎄
