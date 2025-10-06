@@ -52,7 +52,7 @@ function initCalendrier() {
                 handleClickOnCase(maCase);
             });
         })
-        return;// fin de la fonction on a deja le html
+        return;
     }
 
     board.innerHTML = ""; // VIDE LE BOARD, si jamais il y a déjà des éléments dedans
